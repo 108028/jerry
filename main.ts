@@ -35,36 +35,14 @@ input.onButtonPressed(Button.B, function () {
     _1.delete()
     sprite.delete()
     basic.clearScreen()
-    basic.showLeds(`
-        # # # . #
-        # . # . .
-        # # # . #
-        # . # . .
-        # # # . #
-        `)
-    basic.showLeds(`
-        # # . # #
-        . # . . #
-        # # . # #
-        . # . . #
-        # # . # #
-        `)
-    basic.showLeds(`
-        # . # # #
-        # . . # .
-        # . # # #
-        # . . # .
-        # . # # .
-        `)
-    basic.showLeds(`
-        # # # . .
-        . # . . .
-        # # # . .
-        . # . . .
-        # # . . .
-        `)
+    images.createBigImage(`
+        # # # . # # # . . .
+        # . # . . # . . . .
+        # # # . # # # . . .
+        # . # . . # . . . .
+        # # # . # # . . . .
+        `).scrollImage(1, 200)
     basic.clearScreen()
-    basic.showString("A+B or RESET")
     for (let index = 0; index < 99999 * 22222; index++) {
         basic.showNumber(game.score())
     }
